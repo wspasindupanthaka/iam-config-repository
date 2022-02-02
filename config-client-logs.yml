@@ -1,0 +1,35 @@
+kafka-config:
+  schema-registry-url-key: schema.registry.url
+  num-of-partitions: '3'
+  topic-names-to-create: logs-topic
+  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+  topic-name: logs-topic
+  schema-registry-url: http://localhost:9091
+  replication-factor: '3'
+kafka-producer-config:
+  batch-size-boost-factor: '100'
+  linger-ms: '5'
+  batch-size: '16384'
+  retry-count: '5                    '
+  request-timeout-ms: '60001'
+  value-serializer-class: org.apache.kafka.common.serialization.StringSerializer
+  key-serializer-class: org.apache.kafka.common.serialization.LongSerializer
+  compression-type: snappy
+  acks: all
+retry-config:
+  max-interval-ms: '10000'
+  maxAttempts: '3'
+  initial-interval-ms: '1000'
+  sleep-time-ms: '2000'
+  multiplier: '2.0'
+webclient:
+  read-timeout-ms: '10000'
+  write-timeout-ms: '10000'
+  accept-type: application/json
+  query-type: KAFKA_STATE_STORE
+  max-in-memory-size: '10485760'
+  content-type: application/json
+  connect-timeout-ms: '10000'
+server:
+  port: 8080
+
