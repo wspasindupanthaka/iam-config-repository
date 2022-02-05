@@ -27,6 +27,7 @@ kafka-consumer-config:
   max-poll-records: '500'
   specific-avro-reader: 'true'
   concurrency-level: '3'
+  test: 2
 elastic-config:
   socket-timeout-ms: '30000'
   index-name: logs-index
