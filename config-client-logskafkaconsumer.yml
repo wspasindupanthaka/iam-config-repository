@@ -33,6 +33,5 @@ elastic-config:
   connection-url: http://localhost:9200
   connect-timeout-ms: '5000'
   is-repository: 'true'
-  test: 2
 server:
   port: '9192'
