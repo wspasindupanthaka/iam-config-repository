@@ -22,7 +22,6 @@ retry-config:
   initial-interval-ms: '1000'
   sleep-time-ms: '2000'
   multiplier: '2.0'
-  test: 2
 webclient:
   read-timeout-ms: '10000'
   write-timeout-ms: '10000'

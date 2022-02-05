@@ -10,7 +10,6 @@ retry-config:
   initial-interval-ms: '1000'
   sleep-time-ms: '2000'
   multiplier: '2.0'
-  test: 2
 kafka-consumer-config:
   consumer-group-id: logs-topic-consumer
   session-timeout-ms: '10000'
