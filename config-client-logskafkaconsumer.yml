@@ -10,6 +10,7 @@ retry-config:
   initial-interval-ms: '1000'
   sleep-time-ms: '2000'
   multiplier: '2.0'
+  test: 2
 kafka-consumer-config:
   consumer-group-id: logs-topic-consumer
   session-timeout-ms: '10000'
@@ -27,12 +28,12 @@ kafka-consumer-config:
   max-poll-records: '500'
   specific-avro-reader: 'true'
   concurrency-level: '3'
-  test: 2
 elastic-config:
   socket-timeout-ms: '30000'
   index-name: logs-index
   connection-url: http://localhost:9200
   connect-timeout-ms: '5000'
   is-repository: 'true'
+  test: 2
 server:
   port: '9192'
