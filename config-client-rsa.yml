@@ -5,6 +5,7 @@ keycloak-config:
   client-id: rsa-service
   realm: Allianz
 vault-config:
-  host: http://localhost:8200
+  host: localhost
+  port: 8200
   policy: rsa-policy
   token: s.wX1l3DjkrOW5MqSOaW6pxnY1
