@@ -7,3 +7,4 @@ keycloak-config:
 vault-config:
   vault-url: http://localhost:9090
   policy: rsa-policy
+  token: s.wX1l3DjkrOW5MqSOaW6pxnY1
