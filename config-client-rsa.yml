@@ -8,12 +8,10 @@ vault-config:
   url: http://localhost:8200
   policy: rsa-policy
   token: s.wX1l3DjkrOW5MqSOaW6pxnY1
+database-config:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/rsa_db
 spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    username: root
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/rsa_db
-    password: root
   jpa:
     hibernate:
       ddl-auto: update
