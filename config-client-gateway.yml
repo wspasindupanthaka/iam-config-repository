@@ -1,6 +1,6 @@
 server:
   port: 8762
-log-service:
+logs-service:
   ribbon:
     listOfServers: http://localhost:8080
 rsa-service:
