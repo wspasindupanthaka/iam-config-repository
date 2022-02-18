@@ -15,3 +15,12 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+log-service:
+  web-client:
+    content-type: 'application/json'
+    accept-type: 'application/json'
+    base-url: 'http://gateway-service/log-service'
+  write-log:
+    method: POST
+    uri: "/log"
+    accept: ${log-service.webclient.accept-type}
