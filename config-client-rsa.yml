@@ -23,7 +23,7 @@ log-service-config:
     max-in-memory-size: 10485760 # 10MB
     content-type: 'application/json'
     accept-type: 'application/json'
-    base-url: 'http://localhost:8762/log-service'
+    base-url: 'http://localhost:8762/logs-service'
   write-log:
     method: POST
     uri: "/log"
