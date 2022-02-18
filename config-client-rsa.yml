@@ -27,4 +27,4 @@ log-service-config:
   write-log:
     method: POST
     uri: "/log"
-    accept: ${log-service.webclient.accept-type}
+    accept: ${log-service-config.webclient.accept-type}
