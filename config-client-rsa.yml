@@ -15,8 +15,12 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-log-service:
+log-service-config:
   web-client:
+    connect-timeout-ms: 10000
+    read-timeout-ms: 10000
+    write-timeout-ms: 10000
+    max-in-memory-size: 10485760 # 10MB
     content-type: 'application/json'
     accept-type: 'application/json'
     base-url: 'http://gateway-service/log-service'
