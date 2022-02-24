@@ -2,9 +2,9 @@ kafka-config:
   schema-registry-url-key: schema.registry.url
   num-of-partitions: '3'
   topic-names-to-create: logs-topic
-  bootstrap-servers: kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092
+  bootstrap-servers: ${KAFKA-CONFIG_BOOTSTRAP-SERVERS:localhost:19092, localhost:29092, localhost:39092}
   topic-name: logs-topic
-  schema-registry-url: schema-registry:9091
+  schema-registry-url: ${KAFKA-CONFIG_SCHEMA-REGISTRY-URL:http://localhost:9091}
   replication-factor: '3'
 kafka-producer-config:
   batch-size-boost-factor: '100'
