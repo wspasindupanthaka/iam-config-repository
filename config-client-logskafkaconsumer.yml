@@ -1,9 +1,9 @@
 kafka-config:
   schema-registry-url-key: schema.registry.url
   topic-names-to-create: logs-topic
-  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+  bootstrap-servers: ${KAFKA-CONFIG_BOOTSTRAP-SERVERS:localhost:19092, localhost:29092, localhost:39092}
   topic-name: logs-topic
-  schema-registry-url: http://localhost:9091
+  schema-registry-url: ${KAFKA-CONFIG_SCHEMA-REGISTRY-URL:http://localhost:9091}
 retry-config:
   max-interval-ms: '10000'
   maxAttempts: '3'
@@ -30,7 +30,7 @@ kafka-consumer-config:
 elastic-config:
   socket-timeout-ms: '30000'
   index-name: logs-index
-  connection-url: http://localhost:9200
+  connection-url: http://${ELASTIC_HOST:localhost}:${ELASTIC_PORT:9200}/
   connect-timeout-ms: '5000'
   is-repository: 'true'
 server:
