@@ -31,5 +31,5 @@ webclient:
   content-type: application/json
   connect-timeout-ms: '10000'
 server:
-  port: 8081
+  port: 8082
 
