@@ -34,4 +34,4 @@ elastic-config:
   connect-timeout-ms: '5000'
   is-repository: 'true'
 server:
-  port: '9192'
+  port: '9193'
