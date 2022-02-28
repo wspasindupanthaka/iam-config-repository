@@ -1,16 +1,16 @@
 server:
-  port: 8081
+  port: 8083
 keycloak-config:
-  server-url: http://localhost:9090
+  server-url: ${KEYCLOAK_URL:http://localhost:9090}
   client-id: rsa-service
   realm: Allianz
 vault-config:
-  url: http://localhost:8200
+  url: ${VAULT_URL:http://localhost:8200}
   policy: rsa-policy
   token: s.wX1l3DjkrOW5MqSOaW6pxnY1
 database-config:
   driver-class-name: com.mysql.jdbc.Driver
-  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/rsa_db
+  url: ${DATABASE_URL:jdbc:mysql://localhost:3306/rsa_db}
 spring:
   jpa:
     hibernate:
@@ -23,7 +23,7 @@ log-service-config:
     max-in-memory-size: 10485760 # 10MB
     content-type: 'application/json'
     accept-type: 'application/json'
-    base-url: 'http://localhost:8762/logs-service'
+    base-url:  ${LOG_SERVICE_BASEURL:jdbc:http://localhost:8762/logs-service}
   write-log:
     method: POST
     uri: "/log"

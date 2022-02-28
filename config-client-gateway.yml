@@ -5,7 +5,7 @@ logs-service:
     listOfServers: ${LOGS_SERVICE_LIST_OF_SERVERS:http://localhost:8080}
 rsa-service:
   ribbon:
-    listOfServers: ${RSA_SERVICE_LIST_OF_SERVERS:http://localhost:8081}
+    listOfServers: ${RSA_SERVICE_LIST_OF_SERVERS:http://localhost:8082}
 ribbon:
   ReadTimeout: 60000
   connection-timeout: 3000
