@@ -6,6 +6,9 @@ logs-service:
 rsa-service:
   ribbon:
     listOfServers: ${RSA_SERVICE_LIST_OF_SERVERS:http://localhost:8082}
+login-service:
+  ribbon:
+    listOfServers: ${LOGIN_SERVICE_LIST_OF_SERVERS:http://localhost:8084}
 ribbon:
   ReadTimeout: 60000
   connection-timeout: 3000
