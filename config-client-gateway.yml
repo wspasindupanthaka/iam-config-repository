@@ -9,6 +9,9 @@ rsa-service:
 login-service:
   ribbon:
     listOfServers: ${LOGIN_SERVICE_LIST_OF_SERVERS:http://localhost:8084}
+config-server:
+  ribbon:
+    listOfServers: ${CONFIG_SERVER_LIST_OF_SERVERS:http://localhost:9999}
 ribbon:
   ReadTimeout: 60000
   connection-timeout: 3000
